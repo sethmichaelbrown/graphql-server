@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "firstName": "Brian",
+    "lastName": "Byers",
+    "favoriteFood": "ice cream",
+    "favoriteRestaurant": "Mt. Everest"
+  },
+  {
+    "id": 2,
+    "firstName": "Deb",
+    "lastName": "Zapata",
+    "favoriteFood": "ice cream",
+    "favoriteRestaurant": "Mt. Everest"
+  },
+  {
+    "id": 3,
+    "firstName": "Amanada",
+    "lastName": "Herschleb",
+    "favoriteFood": "ice cream",
+    "favoriteRestaurant": "Mt. Everest"
+  }
+]
