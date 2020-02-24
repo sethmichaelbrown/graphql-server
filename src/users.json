@@ -19,5 +19,12 @@
     "lastName": "Herschleb",
     "favoriteFood": "ice cream",
     "favoriteRestaurant": "Mt. Everest"
+  },
+  {
+    "id": 200,
+    "firstName": "Amanda",
+    "lastName": "Gonzalez",
+    "favoriteFood": "KitKat",
+    "favoriteRestaurant": "Mt. Everest"
   }
 ]
