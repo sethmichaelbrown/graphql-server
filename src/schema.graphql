@@ -1,0 +1,23 @@
+type Query {
+  users: [User!]!
+  usersById(id: Int!): [User!]!
+  usersByFavoriteFood(food: String): [User!]!
+}
+
+type Mutation {
+  addUser(
+    id: Int!
+    firstName: String!
+    lastName: String!
+    favoriteFood: String
+    favoriteRestaurant: String
+  ): User
+}
+
+type User {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  favoriteFood: String
+  favoriteRestaurant: String
+}
