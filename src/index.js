@@ -1,12 +1,19 @@
 const { GraphQLServer } = require("graphql-yoga");
 const fs = require("fs");
 
+// Database
 const users = require("./users.json");
+
+const updateDB = fs.writeFileSync(
+  "./src/users.json",
+  JSON.stringify(users),
+  err => err && console.warn(err)
+);
 
 const resolvers = {
   Query: {
     users: () => users,
-    usersById: (r, { id }, context, info) => users.filter(u => u.id === id),
+    usersById: (r, { id }, context, info) => users.find(u => u.id === id),
     usersByFavoriteFood: (r, { food }, context, info) =>
       users.filter(u => u.favoriteFood === food)
   },
@@ -20,11 +27,7 @@ const resolvers = {
         favoriteRestaurant: args.favoriteRestaurant
       });
 
-      fs.writeFileSync(
-        "./src/users.json",
-        JSON.stringify(users),
-        err => err && console.log(err)
-      );
+      updateDB();
 
       return users.find(i => i.id === args.id);
     }
